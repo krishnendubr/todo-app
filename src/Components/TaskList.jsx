@@ -3,7 +3,7 @@ import { doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { db } from './firebase';
 import { useNavigate } from 'react-router-dom';
 import TaskCard from './TaskCard';  // Import the new TaskCard component
-import Navbar from './Navbar';  // Import the Navbar component
+// import Navbar from './Navbar';  // Import the Navbar component
 import './TaskList.css';
 
 const TaskList = ({ projectId, tasks, setProjectName }) => {
@@ -42,9 +42,14 @@ const TaskList = ({ projectId, tasks, setProjectName }) => {
                 setNewTask({ title: '', description: '', isCompleted: 'pending' });
                 alert('Task added successfully!');
                 window.location.reload();
+                // navigate(`/project/${projectId}`);  // Redirect to project details page
+                
+                
             } catch (error) {
                 console.error('Error adding task: ', error);
             }
+            // navigate(`/project/${projectId}`);  // Redirect to project details page
+            // console.log(projectId);
         } else {
             alert('Please fill in both title and description for the task.');
         }

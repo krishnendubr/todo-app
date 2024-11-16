@@ -29,7 +29,7 @@ const ProjectDetails = () => {
         };
 
         fetchProjectDetails();
-    }, [id]);
+    }, [email, id]);
 
     const handleSaveProjectName = async () => {
         if (newProjectName.trim()) {

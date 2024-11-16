@@ -26,7 +26,7 @@ const ListProjects = () => {
         };
 
         fetchProjects();
-        }, []);
+        }, [email]);
 
     return (
         <div className="projects-container">
