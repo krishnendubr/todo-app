@@ -1,0 +1,135 @@
+.task-container {
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 20px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-or-edit-task-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.task-list {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.task-summary {
+    width: 50%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.add-or-edit-task-form {
+    width: 50%;
+}
+
+
+
+
+button[type="submit"] {
+    background-color: #28a745;  /* Green color */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Main container for the form */
+.add-or-edit-task-form {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+/* The form card style */
+.form-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 75%;
+    /* max-width: 500px; */
+    margin: 0 15px;
+}
+.form-card h2{
+    text-align: center;
+}
+
+
+
+/* Form group container */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    /* margin-bottom: 5px; */
+}
+
+.form-group input, .form-group textarea {
+    width: -webkit-fill-available;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-group textarea {
+    height: 50px;
+}
+
+/* Status options */
+.status-options {
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.status-options input {
+    margin-right: 5px;  /* Reduced space between radio button and label */
+    width: auto;
+}
+
+.status-options label {
+    margin-right: 15px;  /* Space between radio button labels */
+    display: inline-flex;
+    align-items: center;  /* Ensure label aligns with the radio button */
+}
+/* Submit button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #219c3e;
+    
+}
+
+.submit-btn:focus {
+    outline: none;
+}
+
+

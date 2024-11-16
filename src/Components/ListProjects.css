@@ -1,0 +1,49 @@
+/* ListProjects.css */
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projects-header {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-item {
+    padding: 10px 15px;
+    background-color: #ecf0f1;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.project-item:hover {
+    background-color: #e1e8ed;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    color: #2980b9;
+}
+
+.task-completed-status {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    float: right;
+}
