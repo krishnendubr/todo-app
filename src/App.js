@@ -18,7 +18,7 @@ function App() {
     } else {
       console.log('session storage is false');
     }
-  }, []);
+  }, [isLoggedIn]);
 
   return (
     <Router>

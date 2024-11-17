@@ -127,3 +127,35 @@
         margin-top: 10px;
     }
 } */
+
+.export-btn{
+    background-color: #007bff;
+    color: white;
+    /* float: right; */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-title-and-export{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem 2rem; */
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.project-export-button{
+    margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-export-button:hover{
+    background-color: #0056b3;
+
+}

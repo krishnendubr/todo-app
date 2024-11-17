@@ -40,7 +40,8 @@ const TaskList = ({ projectId, tasks, setProjectName }) => {
                     tasks: arrayUnion(taskWithDate),
                 });
                 setNewTask({ title: '', description: '', isCompleted: 'pending' });
-                alert('Task added successfully!');
+                // alert('Task added successfully!');
+                console.log('task added');
                 window.location.reload();
                 // navigate(`/project/${projectId}`);  // Redirect to project details page
                 
@@ -63,7 +64,8 @@ const TaskList = ({ projectId, tasks, setProjectName }) => {
                 t.title === task.title ? { ...t, isCompleted: newStatus } : t
             );
             await updateDoc(taskRef, { tasks: updatedTasks });
-            alert(`Task marked as ${newStatus}!`);
+            // alert(`Task marked as ${newStatus}!`);
+            console.log(`Task marked as ${newStatus}!`);
             window.location.reload();
         } catch (error) {
             console.error('Error updating task status: ', error);
@@ -75,7 +77,8 @@ const TaskList = ({ projectId, tasks, setProjectName }) => {
             const taskRef = doc(db, email, projectId);
             const updatedTasks = tasks.filter((t) => t.title !== task.title);
             await updateDoc(taskRef, { tasks: updatedTasks });
-            alert('Task deleted successfully!');
+            // alert('Task deleted successfully!');
+            console.log('task deleted');
             window.location.reload();
         } catch (error) {
             console.error('Error deleting task: ', error);
@@ -97,7 +100,8 @@ const TaskList = ({ projectId, tasks, setProjectName }) => {
                     t.title === editingTask.title ? { ...t, ...newTask } : t
                 );
                 await updateDoc(taskRef, { tasks: updatedTasks });
-                alert('Task updated successfully!');
+                // alert('Task updated successfully!');
+                console.log('task updated');
                 setIsEditing(false);
                 setEditingTask(null);
                 setNewTask({ title: '', description: '', isCompleted: 'pending' });
@@ -139,7 +143,7 @@ const TaskList = ({ projectId, tasks, setProjectName }) => {
                     <h2>{isEditing ? 'Edit Task' : 'Add Task'}</h2>
                     <form onSubmit={isEditing ? handleSaveTask : handleAddTask}>
                         <div className="form-group">
-                            <label>Title</label> <br />
+                            <label>Title</label>
                             <input
                                 type="text"
                                 name="title"
@@ -149,7 +153,7 @@ const TaskList = ({ projectId, tasks, setProjectName }) => {
                             />
                         </div>
                         <div className="form-group">
-                            <label>Description</label> <br />
+                            <label>Description</label>
                             <textarea
                                 name="description"
                                 value={newTask.description}
