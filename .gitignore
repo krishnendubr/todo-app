@@ -24,5 +24,6 @@ yarn-error.log*
 
 # local files
 .history
-firebase.js
+src/Components/firebase.js
+package.json
 
