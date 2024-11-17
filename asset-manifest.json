@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/todo-app/static/css/main.f8466b7c.css",
+    "main.js": "/todo-app/static/js/main.b6d60d55.js",
+    "static/media/google-icon-logo-svgrepo-com.svg": "/todo-app/static/media/google-icon-logo-svgrepo-com.e9a9751cede23097df5da534f5ff1d65.svg",
+    "index.html": "/todo-app/index.html",
+    "main.f8466b7c.css.map": "/todo-app/static/css/main.f8466b7c.css.map",
+    "main.b6d60d55.js.map": "/todo-app/static/js/main.b6d60d55.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8466b7c.css",
+    "static/js/main.b6d60d55.js"
+  ]
+}
