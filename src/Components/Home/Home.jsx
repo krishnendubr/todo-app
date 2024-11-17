@@ -1,8 +1,8 @@
 import React from 'react';
-import ListProjects from './ListProjects';
-import AddProject from './AddProject';
+import Navbar from '../Navbar/Navbar';
+import ListProjects from './../Project/ListProjects';
+import AddProject from './../Project/AddProject';
 import './Home.css';
-import Navbar from './Navbar';
 import { useEffect } from 'react';
 
 const Home = () => {

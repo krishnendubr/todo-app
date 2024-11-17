@@ -4,11 +4,7 @@ import "./Login.css"; // Import CSS file for styling
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
 import { signInWithPopup } from "firebase/auth";
-import GoogleLogo from "./../google-icon-logo-svgrepo-com.svg";
-
-
-
-
+import GoogleLogo from "./../../Assets/Icons/google-icon-logo-svgrepo-com.svg";
 
 const provider = new GoogleAuthProvider();
 // import { useEffect } from 'react';

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Home from './Components/Home';
-import Login from './Components/Login';
-import ProjectDetails from './Components/ProjectDetails';
-import Register from './Components/Register';
+import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
+import ProjectDetails from './Components/Project/ProjectDetails';
+import Register from './Components/Register/Register';
 import './App.css';
 
 function App() {

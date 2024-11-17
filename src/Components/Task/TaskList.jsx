@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { doc, updateDoc, arrayUnion } from 'firebase/firestore';
-import { db } from './firebase';
-// import { useNavigate } from 'react-router-dom';
-import TaskCard from './TaskCard';  // Import the new TaskCard component
-// import Navbar from './Navbar';  // Import the Navbar component
+import { db } from './../firebase';
+import TaskCard from './TaskCard'; 
 import './TaskList.css';
 
 const TaskList = ({ projectId, tasks, setProjectName }) => {
