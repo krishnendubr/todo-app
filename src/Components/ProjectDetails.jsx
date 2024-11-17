@@ -63,8 +63,6 @@ const ProjectDetails = () => {
             {project ? (
                 <>
                     <div className="project-info">
-
-                    
                         <div className="project-title">
                             {isEditingProject ? (
                                 <>

@@ -17,3 +17,12 @@ const db = getFirestore(app);
 
 // Export the initialized Firestore instance
 export { db };
+
+
+npm install firebase@latest
+npm install react-router-dom 
+npm install react-tooltip
+npm install react-icons
+npm install gh-pages --save-dev 
+
+git commit -m 'minor structure changes'

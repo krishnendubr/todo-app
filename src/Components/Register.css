@@ -1,19 +1,24 @@
 /* Register.css */
 
 .register-container {
-    max-width: 400px;
-    padding: 20px;
-    margin: 30px 30px 30px auto;
+    /* max-width: 400px; */
+    display: flex;
+    /* padding: 20px; */
+    /* margin: 30px 30px 30px auto; */
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f4f4f4;
+    height: 100vh;
 }
 
-.register-container h2 {
+/* .register-container h2 {
     text-align: center;
     margin-bottom: 20px;
-}
+} */
 
 .form-group {
     margin-bottom: 15px;
@@ -69,3 +74,123 @@ p a {
 p a:hover {
     text-decoration: underline;
 }
+
+/* register.css */
+
+.register-container{
+    
+}
+
+.register-container-landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: #f4f4f4;
+}
+
+.register-landing-title{
+    color: #030303;
+    margin: 0 auto 45px;
+    max-width: 14em;
+    font-size: 5em;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: normal;
+    
+}
+
+
+.register-landing-text{
+    color: #737373;
+    margin: 0 auto 45px;
+    font-size: 1.5em;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.register-container-box {
+    /* max-width: 400px; */
+    width: 30%;
+    padding: 20px;
+    margin: auto;
+    /* margin: 30px 30px 30px auto; */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.register-button-set{
+    display: flex;
+}
+.google-logo{
+    width: 20px;
+    height: 20px;
+}
+
+.register-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.password-input-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.password-toggle:hover {
+    text-decoration: underline;
+}
+
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.register-button:hover {
+    background-color: #0056b3;
+}
+
+.error-text {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+

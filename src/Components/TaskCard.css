@@ -22,9 +22,22 @@
 }
 
 .task-card-header h5 {
-    font-size: 18px;
+    font-size: 1.3rem;
     font-weight: bold;
     margin: 0;
+    
+}
+
+.task-card-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-card p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    color: #737373;
 }
 
 .status {
@@ -61,9 +74,9 @@
 
 /* Button styles */
 button {
-    background-color: #f8f8f8;
+    /* background-color: #737373; */
     border: none;
-    padding: 8px 15px;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -96,4 +109,33 @@ button {
 
 .delete-btn:hover {
     background-color: #ffcdd2;
+}
+
+.task-card-actions button {
+    position: relative;
+    background: #ececec;
+    border: none;
+    cursor: pointer;
+}
+
+.task-card-actions button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -30px; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
 }

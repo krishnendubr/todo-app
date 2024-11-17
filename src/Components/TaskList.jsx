@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { db } from './firebase';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import TaskCard from './TaskCard';  // Import the new TaskCard component
 // import Navbar from './Navbar';  // Import the Navbar component
 import './TaskList.css';
@@ -10,7 +10,7 @@ const TaskList = ({ projectId, tasks, setProjectName }) => {
     const [newTask, setNewTask] = useState({ title: '', description: '', isCompleted: 'pending' });
     const [isEditing, setIsEditing] = useState(false);
     const [editingTask, setEditingTask] = useState(null);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const email = sessionStorage.getItem('email');
 
     const handleTaskChange = (e) => {
@@ -180,7 +180,9 @@ const TaskList = ({ projectId, tasks, setProjectName }) => {
                                 <label htmlFor="completed">Completed</label>
                             </div>
                         </div>
-                        <button type="submit" className="submit-btn">{isEditing ? 'Save Task' : 'Add Task'}</button>
+                        <div className="form-group">
+                            <button type="submit" className="submit-btn">{isEditing ? 'Save Task' : 'Add Task'}</button>
+                        </div>
                     </form>
                 </div>
             </div>

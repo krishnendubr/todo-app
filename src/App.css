@@ -6,4 +6,5 @@ html, body {
     font-family: 'Arial', sans-serif;
     /* remove scroll bar */
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }

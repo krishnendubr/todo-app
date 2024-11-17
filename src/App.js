@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './Components/Home';
 import Login from './Components/Login';
 import ProjectDetails from './Components/ProjectDetails';
@@ -11,13 +11,11 @@ function App() {
 
   // Check sessionStorage on app load
   useEffect(() => {
-    if (sessionStorage.getItem('isLoggedIn') ==='true') {
+    if (sessionStorage.getItem('isLoggedIn') === 'true') {
       setIsLoggedIn(true);
-      console.log(('session storage is true'))
+      console.log('session storage is true');
       console.log('so is logged in must be true ', isLoggedIn);
-
-    }
-    else{
+    } else {
       console.log('session storage is false');
     }
   }, []);
@@ -28,7 +26,7 @@ function App() {
         <Routes>
           <Route 
             path="/" 
-            element={sessionStorage.getItem('isLoggedIn')==='true' ? <Home/> : <Navigate to="/login" />} 
+            element={sessionStorage.getItem('isLoggedIn') === 'true' ? <Home /> : <Navigate to="/login" />} 
           />
           <Route 
             path="/login" 
@@ -36,9 +34,9 @@ function App() {
           />
           <Route 
             path="/project/:id" 
-            element={sessionStorage.getItem('isLoggedIn')==='true' ? <ProjectDetails /> : <Navigate to="/login" />} 
+            element={sessionStorage.getItem('isLoggedIn') === 'true' ? <ProjectDetails /> : <Navigate to="/login" />} 
           />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<Register setIsLoggedIn={setIsLoggedIn} />} />
         </Routes>
       </div>
     </Router>

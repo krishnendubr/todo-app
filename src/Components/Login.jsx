@@ -1,49 +1,94 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Import CSS file for styling
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Login.css"; // Import CSS file for styling
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
+import { GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";
+import GoogleLogo from "./../google-icon-logo-svgrepo-com.svg";
+
+
+
+
+
+const provider = new GoogleAuthProvider();
 // import { useEffect } from 'react';
 
 function Login({ setIsLoggedIn }) {
-    const navigate = useNavigate();
-  
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-  
-      const auth = getAuth();
-      signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // User logged in
-          const user = userCredential.user;
-          console.log(user);
-  
-          alert('User logged in successfully');
-          sessionStorage.setItem('isLoggedIn', 'true');
-          sessionStorage.setItem('email', email);
-          console.log('first login: '+sessionStorage.getItem('isLoggedIn'));
-  
-          setIsLoggedIn(true); // Update app state
-          navigate('/'); // Redirect to home
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          console.log(errorCode);
-          const errorMessage = error.message;
-          console.log(errorMessage);
-          setError(errorMessage);
-        });
-    };
-  
-    return (
-      <div>
-        <Navbar />
-        <div className="login-container">
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // User logged in
+        const user = userCredential.user;
+        console.log(user);
+
+        alert("User logged in successfully");
+        sessionStorage.setItem("isLoggedIn", "true");
+        sessionStorage.setItem("email", email);
+        console.log("first login: " + sessionStorage.getItem("isLoggedIn"));
+
+        // setIsLoggedIn(true); // Update app state
+        navigate("/"); // Redirect to home
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        console.log(errorCode);
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        setError(errorMessage);
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    const auth = getAuth();
+
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+        alert("User logged in successfully");
+        sessionStorage.setItem("isLoggedIn", "true");
+        sessionStorage.setItem("email", user.email);
+        navigate('/');
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+  };
+
+  return (
+    <div>
+      {/* <Navbar /> */}
+      <div className="login-container">
+
+        <div className="login-container-landing">
+          <h1 className="login-landing-title">A simple to do list<br/>to manage you</h1>
+          <p className="login-landing-text">Easily manage your personal tasks</p>
+        </div>
+
+        <div className="login-container-box">
           <h1 className="login-title">Login</h1>
           <form onSubmit={handleSubmit} className="login-form">
             <div className="input-group">
@@ -78,21 +123,35 @@ function Login({ setIsLoggedIn }) {
                 </span>
               </div>
             </div>
-            <button type="submit" className="login-button">
-              Login
-            </button>
-            {error && <p className="error-text">{error}</p>}
+            
+            <div className="login-button-set">
+              <button type="submit" className="login-button">
+                Login
+              </button>
+              <button
+                type="button"
+                className="google-login material-icons"
+                onClick={handleGoogleLogin}>
+                <img src={GoogleLogo} alt="Google Logo" className="google-logo"/>
+              </button>
+            </div>
+
+            {/* {error && <p className="error-text">{error}</p>} */}
+            {error && <p className="error-text">Wrong email/password</p>}
             <p className="register-link">
-              Don't have an account?{' '}
-              <span onClick={() => navigate('/register')} className="register-here">
+              Don't have an account?{" "}
+              <span
+                onClick={() => navigate("/register")}
+                className="register-here"
+              >
                 Sign Up
               </span>
             </p>
           </form>
         </div>
       </div>
-    );
-  }
-  
-  export default Login;
-  
+    </div>
+  );
+}
+
+export default Login;

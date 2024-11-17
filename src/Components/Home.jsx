@@ -3,8 +3,14 @@ import ListProjects from './ListProjects';
 import AddProject from './AddProject';
 import './Home.css';
 import Navbar from './Navbar';
+import { useEffect } from 'react';
 
 const Home = () => {
+  useEffect(() => {
+    if (sessionStorage.getItem('isLoggedIn') === "false") {
+      window.location.href = '/login';
+    }
+  }, []);
 
   return (
     <div className="home-container">
@@ -13,7 +19,7 @@ const Home = () => {
           <h2>Todo App</h2>
         </div>
       </nav> */}
-      <Navbar />
+      <Navbar/>
       <div className="project-section">
         <div className="list-projects-container">
           <ListProjects />

@@ -1,13 +1,15 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({setIsLoggedIn}) => {
     const navigate = useNavigate();
     const location = useLocation(); // Get the current location
 
+
     const handleLogout = () => {
         sessionStorage.setItem('isLoggedIn', 'false');
-        window.location.href = '/login';
+        // setIsLoggedIn(false); // Update app state
+        navigate('/login'); // Navigates to the login route
     };
 
     const goToHomepage = () => {

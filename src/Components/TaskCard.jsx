@@ -10,18 +10,28 @@ const TaskCard = ({ task, onEdit, onDelete, onToggleStatus }) => {
                     {task.isCompleted === 'pending' ? 'Pending' : 'Completed'}
                 </span>
             </div>
-            <p><strong>Description:</strong> {task.description}</p>
-            <p><strong>Date:</strong> {task.date}</p>
-            <div className="task-card-actions">
-                <button onClick={() => onToggleStatus(task)} className="toggle-status-btn">
-                    {task.isCompleted === 'pending' ? <FaCheck size={20} color="green" /> : <FaTimes size={20} color="red" />}
-                </button>
-                <button onClick={() => onEdit(task)} className="edit-btn">
-                    <FaEdit size={20} />
-                </button>
-                <button onClick={() => onDelete(task)} className="delete-btn">
-                    <FaTrashAlt size={20} color="red" />
-                </button>
+            <div className="task-card-data">
+                <div className="task-card-info">
+                    <p><strong>Description:</strong> {task.description}</p>
+                    <p><strong>Date:</strong> {task.date}</p>
+                </div>
+                <div className="task-card-actions">
+                    <button onClick={() => onEdit(task)} className="edit-btn">
+                        <FaEdit size={20} />
+                        <span className="tooltip">Edit Task</span>
+                    </button>
+                    <button onClick={() => onDelete(task)} className="delete-btn">
+                        <FaTrashAlt size={20} color="red" />
+                        <span className="tooltip">Delete Task</span>
+                    </button>
+                    <button onClick={() => onToggleStatus(task)} className="toggle-status-btn">
+                        {task.isCompleted === 'pending' ? <FaCheck size={20} color="green" /> : <FaTimes size={20} color="red" />}
+                        <span className="tooltip">
+                            {task.isCompleted === 'pending' ? 'Mark as Completed' : 'Mark as Pending'}
+                        </span>
+                    </button>
+                </div>
+
             </div>
         </div>
     );

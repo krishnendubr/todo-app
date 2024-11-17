@@ -33,16 +33,18 @@ const ListProjects = () => {
             <h1 className="projects-header">Projects List</h1>
             <ul className="project-list">
                 {projects.map((project) => (
-                    <li key={project.id} className="project-item">
-                        <span className="project-count">{projects.indexOf(project) + 1}. </span>
-                        <Link to={`/project/${project.id}`} className="project-link"><b>{project.name}</b></Link>
-                        {project.tasks && (
-                            <span className="task-completed-status">
-                                {project.tasks.filter(task => task.isCompleted === 'pending').length}/
-                                {project.tasks.length} tasks pending
-                            </span>
-                        )}
-                    </li>
+                    <Link to={`/project/${project.id}`} className="project-link">
+                        <li key={project.id} className="project-item">
+                            <span className="project-count">{projects.indexOf(project) + 1}. </span>
+                            <b>{project.name}</b>
+                            {project.tasks && (
+                                <span className="task-completed-status">
+                                    {project.tasks.filter(task => task.isCompleted === 'pending').length}/
+                                    {project.tasks.length} tasks pending
+                                </span>
+                            )}
+                        </li>
+                    </Link>
                 ))}
             </ul>
         </div>
