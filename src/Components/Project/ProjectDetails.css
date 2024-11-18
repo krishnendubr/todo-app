@@ -6,7 +6,9 @@
     /* justify-content: center; */
     /* padding: 20px; */
     /* min-height: 100vh; */
-    background-color: #f4f7fc;
+    /* background-color: #f4f7fc; */
+
+    
 }
 
 /* Styling the project title and actions */
@@ -84,7 +86,7 @@
     /* max-width: 800px; */
     /* margin-top: 20px; */
     padding: 20px;
-    background-color: #ececec;
+    /* background-color: #ececec; */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

@@ -7,4 +7,13 @@ html, body {
     /* remove scroll bar */
     scrollbar-width: none;
     scroll-behavior: smooth;
+    background-image: url('./Assets/Background/bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
