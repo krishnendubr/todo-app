@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and responsive Todo application built using **ReactJS**. The app allows users to manage their tasks efficiently with features like adding, deleting, and marking tasks as completed.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add Tasks:** Quickly add new tasks to your todo list.
+- **Delete Tasks:** Remove tasks from the list once they are no longer needed.
+- **Mark Tasks as Completed:** Keep track of your progress by marking tasks as completed.
+- **Responsive Design:** Works seamlessly across different devices and screen sizes.
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Check out the live application [here](https://krishnendubr.github.io/todo-app/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **Frontend:** ReactJS, HTML5, CSS3
+- **Hosting:** GitHub Pages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependencies
 
-### `npm run build`
+The following packages are used in this project:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **[file-saver](https://www.npmjs.com/package/file-saver)** `^2.0.5`: For saving files on the client-side.
+- **[firebase](https://www.npmjs.com/package/firebase)** `^11.0.1`: For backend as a service (BaaS), including authentication, database, and hosting.
+- **[react](https://www.npmjs.com/package/react)** `^18.3.1`: Core library for building the user interface.
+- **[react-dom](https://www.npmjs.com/package/react-dom)** `^18.3.1`: For rendering React components to the DOM.
+- **[react-icons](https://www.npmjs.com/package/react-icons)** `^5.3.0`: Provides popular icon packs as React components.
+- **[react-router-dom](https://www.npmjs.com/package/react-router-dom)** `^6.28.0`: For routing and navigation in React applications.
+- **[react-scripts](https://www.npmjs.com/package/react-scripts)** `5.0.1`: Scripts and configuration used by Create React App.
+- **[react-tooltip](https://www.npmjs.com/package/react-tooltip)** `^5.28.0`: A lightweight and customizable tooltip library for React.
+- **[web-vitals](https://www.npmjs.com/package/web-vitals)** `^2.1.4`: For measuring web performance metrics.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+Follow the steps below to run the application locally:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/krishnendubr/todo-app.git
+2. Navigate to the project directory:
+   ```bash
+   cd todo-app
+3. Install dependencies:
+   ```bash
+   npm install
+4. Start the development server:
+   ```bash
+   npm start
+5. Open your browser and navigate to:
+   ```arduino
+   http://localhost:3000
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Folder Structure
+```csharp
+   todapp/ 
+   ├── build/ # Auto-generated build files 
+   ├── node_modules/ # Project dependencies 
+   ├── public/ # Public assets (index.html, etc.) 
+   ├── src/ # Source code 
+   │    ├── Assets/ # Images and icons used in the app 
+   │    │   ├── Background/ # Background images 
+   │    │   │       └── bg1.jpg 
+   │    │   └── Icons/ # Icons for the app 
+   │    │         ├── google-icon-logo-svgrepo-com.svg 
+   │    │         ├── icons8-todo-list-16.png 
+   │    │         └── to-do-list.png 
+   │    ├── Components/ # Reusable components 
+   │    │   ├── Home/ # Home page components 
+   │    │   │     ├── Home.css 
+   │    │   │     └── Home.jsx 
+   │    │   ├── Login/ # Login page components 
+   │    │   │     ├── Login.css 
+   │    │   │     └── Login.jsx 
+   │    │   ├── Navbar/ # Navigation bar components 
+   │    │   │     ├── Navbar.css 
+   │    │   │     └── Navbar.jsx 
+   │    │   ├── Project/ # Project management components 
+   │    │   │   ├── AddProject.css 
+   │    │   │   ├── AddProject.jsx 
+   │    │   │   ├── ListProjects.css 
+   │    │   │   ├── ListProjects.jsx 
+   │    │   │   ├── ProjectDetails.css 
+   │    │   │   └── ProjectDetails.jsx 
+   │    │   ├── Register/ # Registration page components 
+   │    │   │   ├── Register.css 
+   │    │   │   └── Register.jsx 
+   │    │   ├── Task/ # Task management components 
+   │    │   │   ├── TaskCard.css 
+   │    │   │   ├── TaskCard.jsx 
+   │    │   │   ├── TaskList.css 
+   │    │   │   └── TaskList.jsx 
+   │    │   ├── Trash/ # Deleted project management 
+   │    │   │   ├── ProjectPage.css 
+   │    │   │   └── ProjectPage.jsx 
+   │    │   └── signinwithgooglebutton.jsx # Google sign-in button 
+   │    ├── firebase.js # Firebase configuration 
+   │    ├── App.css # Global styles 
+   │    ├── App.js # Main application component 
+   │    ├── index.js # Entry point for the app 
+   ├── .gitignore # Ignored files for Git 
+   ├── package.json # Dependencies and scripts 
+   ├── package-lock.json # Dependency lock file 
+   └── README.md # Project documentation
+```
+## How to Use
+- Open the app in your browser.
+- Use the input field to type your task and click Add to save it.
+- Mark tasks as completed by clicking the checkbox next to them.
+- Remove tasks by clicking the delete button.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Future Enhancements
+- Filter Tasks: Add filtering options (e.g., all, active, completed).Edit Tasks: Allow users to edit existing tasks.
+- Persistent Data: Save tasks to local storage or a database for future sessions.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
+- Contributions are welcome! If you would like to suggest improvements or report a bug, feel free to open an issue or create a pull request.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+- This project is licensed under the MIT License. See the [here](LICENSE) file for details.
