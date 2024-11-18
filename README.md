@@ -18,6 +18,22 @@ Check out the live application [here](https://krishnendubr.github.io/todo-app/).
 - **Frontend:** ReactJS, HTML5, CSS3
 - **Hosting:** GitHub Pages
 
+## Dependencies
+
+The following packages are used in this project:
+
+- **[file-saver](https://www.npmjs.com/package/file-saver)** `^2.0.5`: For saving files on the client-side.
+- **[firebase](https://www.npmjs.com/package/firebase)** `^11.0.1`: For backend as a service (BaaS), including authentication, database, and hosting.
+- **[react](https://www.npmjs.com/package/react)** `^18.3.1`: Core library for building the user interface.
+- **[react-dom](https://www.npmjs.com/package/react-dom)** `^18.3.1`: For rendering React components to the DOM.
+- **[react-icons](https://www.npmjs.com/package/react-icons)** `^5.3.0`: Provides popular icon packs as React components.
+- **[react-router-dom](https://www.npmjs.com/package/react-router-dom)** `^6.28.0`: For routing and navigation in React applications.
+- **[react-scripts](https://www.npmjs.com/package/react-scripts)** `5.0.1`: Scripts and configuration used by Create React App.
+- **[react-tooltip](https://www.npmjs.com/package/react-tooltip)** `^5.28.0`: A lightweight and customizable tooltip library for React.
+- **[web-vitals](https://www.npmjs.com/package/web-vitals)** `^2.1.4`: For measuring web performance metrics.
+
+---
+
 ## Installation
 
 Follow the steps below to run the application locally:
@@ -66,4 +82,4 @@ Follow the steps below to run the application locally:
 - Contributions are welcome! If you would like to suggest improvements or report a bug, feel free to open an issue or create a pull request.
 
 ## License
-- This project is licensed under the MIT License. See the [LICENSE](https://google.com) file for details.
+- This project is licensed under the MIT License. See the [here](LICENSE) file for details.
