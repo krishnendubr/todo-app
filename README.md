@@ -56,11 +56,55 @@ Follow the steps below to run the application locally:
 
 ## Folder Structure
 ```csharp
-   todapp/ ├── build/ # Auto-generated build files ├── node_modules/ # Project dependencies ├── public/ # Public assets (index.html, etc.) ├── src/ # Source code │ ├── Assets/ # Images and icons used in the app │ │ ├── Background/ # Background images │ │ │ └── bg1.jpg │ │ └── Icons/ # Icons for the app │ │ ├── google-icon-logo-svgrepo-com.svg │ │ ├── icons8-todo-list-16.png │ │ └── to-do-list.png │ ├── Components/ # Reusable components │ │ ├── Home/ # Home page components │ │ │ ├── Home.css │ │ │ └── Home.jsx │ │ ├── Login/ # Login page components │ │ │ ├── Login.css │ │ │ └── Login.jsx │ │ ├── Navbar/ # Navigation bar components │ │ │ ├── Navbar.css │ │ │ └── Navbar.jsx │ │ ├── Project/ # Project management components │ │ │ ├── AddProject.css │ │ │ ├── AddProject.jsx │ │ │ ├── ListProjects.css │ │ │ ├── ListProjects.jsx │ │ │ ├── ProjectDetails.css │ │ │ └── ProjectDetails.jsx │ │ ├── Register/ # Registration page components │ │ │ ├── Register.css │ │ │ └── Register.jsx │ │ ├── Task/ # Task management components │ │ │ ├── TaskCard.css │ │ │ ├── TaskCard.jsx │ │ │ ├── TaskList.css │ │ │ └── TaskList.jsx │ │ ├── Trash/ # Deleted project management │ │ │ ├── ProjectPage.css │ │ │ └── ProjectPage.jsx │ │ └── signinwithgooglebutton.jsx # Google sign-in button │ ├── firebase.js # Firebase configuration │ ├── App.css # Global styles │ ├── App.js # Main application component │ ├── index.js # Entry point for the app ├── .gitignore # Ignored files for Git ├── package.json # Dependencies and scripts ├── package-lock.json # Dependency lock file └── README.md # Project documentation
-
-vbnet
-Copy code
-
+   todapp/ 
+   ├── build/ # Auto-generated build files 
+   ├── node_modules/ # Project dependencies 
+   ├── public/ # Public assets (index.html, etc.) 
+   ├── src/ # Source code 
+   │    ├── Assets/ # Images and icons used in the app 
+   │    │   ├── Background/ # Background images 
+   │    │   │       └── bg1.jpg 
+   │    │   └── Icons/ # Icons for the app 
+   │    │         ├── google-icon-logo-svgrepo-com.svg 
+   │    │         ├── icons8-todo-list-16.png 
+   │    │         └── to-do-list.png 
+   │    ├── Components/ # Reusable components 
+   │    │   ├── Home/ # Home page components 
+   │    │   │     ├── Home.css 
+   │    │   │     └── Home.jsx 
+   │    │   ├── Login/ # Login page components 
+   │    │   │     ├── Login.css 
+   │    │   │     └── Login.jsx 
+   │    │   ├── Navbar/ # Navigation bar components 
+   │    │   │     ├── Navbar.css 
+   │    │   │     └── Navbar.jsx 
+   │    │   ├── Project/ # Project management components 
+   │    │   │   ├── AddProject.css 
+   │    │   │   ├── AddProject.jsx 
+   │    │   │   ├── ListProjects.css 
+   │    │   │   ├── ListProjects.jsx 
+   │    │   │   ├── ProjectDetails.css 
+   │    │   │   └── ProjectDetails.jsx 
+   │    │   ├── Register/ # Registration page components 
+   │    │   │   ├── Register.css 
+   │    │   │   └── Register.jsx 
+   │    │   ├── Task/ # Task management components 
+   │    │   │   ├── TaskCard.css 
+   │    │   │   ├── TaskCard.jsx 
+   │    │   │   ├── TaskList.css 
+   │    │   │   └── TaskList.jsx 
+   │    │   ├── Trash/ # Deleted project management 
+   │    │   │   ├── ProjectPage.css 
+   │    │   │   └── ProjectPage.jsx 
+   │    │   └── signinwithgooglebutton.jsx # Google sign-in button 
+   │    ├── firebase.js # Firebase configuration 
+   │    ├── App.css # Global styles 
+   │    ├── App.js # Main application component 
+   │    ├── index.js # Entry point for the app 
+   ├── .gitignore # Ignored files for Git 
+   ├── package.json # Dependencies and scripts 
+   ├── package-lock.json # Dependency lock file 
+   └── README.md # Project documentation
 ```
 ## How to Use
 - Open the app in your browser.
