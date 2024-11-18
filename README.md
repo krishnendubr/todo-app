@@ -66,4 +66,4 @@ Follow the steps below to run the application locally:
 - Contributions are welcome! If you would like to suggest improvements or report a bug, feel free to open an issue or create a pull request.
 
 ## License
-- This project is licensed under the MIT License. See the [here](LICENSE) file for details.
+- This project is licensed under the MIT License. See the [LICENSE](https://google.com) file for details.
